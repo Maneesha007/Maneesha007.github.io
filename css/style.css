@@ -251,7 +251,8 @@ header.sticky{
 
 .contact{
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+
 	align-items: center;
 	gap: 3rem;
 }
@@ -457,11 +458,14 @@ img{
 	box-sizing: border-box;
 }
 
+
 .diff-skills::after {
 	content: "";
 	display: table;
 	clear: both;
 }
+
+
 
 .skill-item{
 	float: left;
@@ -470,8 +474,13 @@ img{
 	padding: 8px;
 } 
 
+
 @media (max-width:660px){
 	.skill-item img{
+		height:90%;
+		width:90%;
+	}
+	.education-item img{
 		height:90%;
 		width:90%;
 	}
@@ -614,4 +623,61 @@ font-family: 'Roboto', sans-serif;
 	.Tcontainer{
 		grid-template-columns: 1fr;
 	}
+}
+
+.box {
+    display: flex;
+    flex-direction: column; /* Arrange image and text vertically */
+    align-items: center; /* Center align items horizontally */
+    margin-bottom: 40px; /* Add significant bottom margin between items */
+}
+
+.box img {
+    margin-bottom: 20px; /* Add margin between image and text */
+    width: 100px; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0; /* Reset margin for h3 */
+    transition: all .40s ease;
+}
+
+.box p {
+    margin: 0; /* Reset margin for p */
+}
+
+/* Target the education section */
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align education section center horizontally */
+    text-align: center; /* Center align text within the education section */
+}
+
+/* Target the education-content within the education section */
+.education .education-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align columns horizontally */
+    max-width: 800px;
+}
+
+/* Target the box elements within the education section */
+.education .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+/* Target the box images within the education section */
+.education .box img {
+    margin-bottom: 10px;
+    width: 100px;
+    height: auto;
 }
